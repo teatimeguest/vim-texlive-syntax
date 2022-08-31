@@ -1,0 +1,14 @@
+name: CI
+on:
+  push:
+    branches: main
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: pip3 install editorconfig-checker vim-vint
+      - run: ec && vint .
