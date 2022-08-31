@@ -23,7 +23,7 @@ syntax region texliveProfileComment
 
 syntax region texliveProfileInvalidOption
   \ display
-  \ start='\<[^[:space:]#]\+\>' end='$'
+  \ start='\<[^[:space:]#]\+[[:space:]#]' end='$'
   \ contains=texliveProfileComment
   \ keepend oneline
 
